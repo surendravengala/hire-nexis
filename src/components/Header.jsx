@@ -97,8 +97,7 @@ export default function Header() {
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
             aria-controls={mobileNavId}
-            onClick={() => setMobileOpen((prev) => !prev)}
-          >
+            onClick={() => setMobileOpen((prev) => !prev)}>
             <span className="menu-toggle__box" aria-hidden="true">
               <span className="menu-toggle__bar" />
               <span className="menu-toggle__bar" />

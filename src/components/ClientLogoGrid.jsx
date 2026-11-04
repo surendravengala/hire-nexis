@@ -6,12 +6,12 @@ import { clientLogos } from '../config/clients';
  * Pass variant="grid" for a static layout if needed.
  */
 export default function ClientLogoGrid({
-  limit,
   className,
   labelledBy,
   variant = 'marquee',
 }) {
-  const logos = typeof limit === 'number' ? clientLogos.slice(0, limit) : clientLogos;
+  // Always render the full registered list — no slice/limit/filter
+  const logos = clientLogos;
 
   if (!logos.length) {
     return (
@@ -43,7 +43,7 @@ export default function ClientLogoGrid({
     );
   }
 
-  // Duplicate sequence for a seamless CSS loop
+  // Duplicate sequence so translateX(-50%) loops without a visible jump
   const sequence = [...logos, ...logos];
 
   return (
@@ -55,21 +55,25 @@ export default function ClientLogoGrid({
     >
       <div className="logo-marquee__viewport">
         <ul className="logo-marquee__track">
-          {sequence.map((client, index) => (
-            <li
-              key={`${client.id}-${index}`}
-              className="logo-marquee__item"
-              aria-hidden={index >= logos.length ? true : undefined}
-            >
-              <img
-                src={client.src}
-                alt={index < logos.length ? `${client.name} logo` : ''}
-                loading="lazy"
-                width={200}
-                height={72}
-              />
-            </li>
-          ))}
+          {sequence.map((client, index) => {
+            const isDuplicate = index >= logos.length;
+            return (
+              <li
+                key={`${client.id}-${index}`}
+                className="logo-marquee__item"
+                aria-hidden={isDuplicate ? true : undefined}
+              >
+                <img
+                  src={client.src}
+                  alt={isDuplicate ? '' : `${client.name} logo`}
+                  loading={isDuplicate ? 'eager' : 'lazy'}
+                  decoding="async"
+                  width={220}
+                  height={100}
+                />
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

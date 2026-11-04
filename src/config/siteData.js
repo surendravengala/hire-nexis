@@ -8,13 +8,13 @@ export const siteConfig = {
   tagline: 'Premium Staffing & Recruitment',
   description:
     'Hire Nexis helps businesses build stronger teams through strategic staffing, recruitment, and workforce solutions tailored to their needs.',
-  url: 'https://www.hirenexis.com',
+  url: 'https://www.hirenexis.in',
   contact: {
-    email: 'hello@hirenexis.com',
-    phone: '+1 (555) 012-3456',
-    phoneHref: 'tel:+15550123456',
-    address: '100 Talent Avenue, Suite 400',
-    city: 'Business District, NY 10001',
+    email: 'info@hirenexis.in',
+    phone: '99663 95396',
+    phoneHref: 'tel:99663 95396',
+    address: '1st Floor, Spacion Business Centre, Mindspace',
+    city: 'Hyderabad, Telangana, 500081',
     hours: 'Monday – Friday, 9:00 AM – 6:00 PM',
   },
   social: {
