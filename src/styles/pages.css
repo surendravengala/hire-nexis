@@ -376,6 +376,9 @@
 
 /* —— Process timeline —— */
 .timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
@@ -394,10 +397,16 @@
 }
 
 .timeline__item {
+  list-style: none;
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 0 0.35rem;
+}
+
+.timeline__item::marker {
+  content: '';
+  font-size: 0;
 }
 
 .timeline__marker {

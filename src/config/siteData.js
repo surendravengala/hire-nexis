@@ -13,15 +13,15 @@ export const siteConfig = {
     email: 'info@hirenexis.in',
     phone: '99663 95396',
     phoneHref: 'tel:99663 95396',
-    address: '1st Floor, Spacion Business Centre, Mindspace',
+    address: 'Hire Nexis, 1st Floor, Jain Sadhguru Capital Park, Madhapur',
     city: 'Hyderabad, Telangana, 500081',
     hours: 'Monday – Friday, 9:00 AM – 6:00 PM',
   },
   social: {
     // Replace these placeholders with official Hire Nexis profile URLs when available.
     linkedin: 'https://www.linkedin.com/', // CONFIGURE: official LinkedIn profile
-    instagram: 'https://www.instagram.com/', // CONFIGURE: official Instagram profile
-    youtube: 'https://www.youtube.com/', // CONFIGURE: official YouTube channel
+    instagram: 'https://www.instagram.com/hirenexis?xtok=MTNlMGgycGI2ZWM0cw==', // CONFIGURE: official Instagram profile
+    youtube: 'https://youtube.com/@hirenexis7?si=GkEVSnlacYgOQ6ws', // CONFIGURE: official YouTube channel
   },
   legal: {
     lastUpdated: '17 October 2026',
