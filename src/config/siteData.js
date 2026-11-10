@@ -44,7 +44,7 @@ export function getHireTalentGmailUrl() {
     ].join('\n'),
   });
 
-  return `https://www.hirenexis.in/apply`;
+  return `https://crm.hirenexis.in/apply`;
 }
 
 export const navLinks = [
